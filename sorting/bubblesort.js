@@ -1,13 +1,17 @@
-let arr = [18, 4, 1, 23, 11, 20, 3];
-const bubbleS = x => {
-  let lengthX = x.length;
-  for (let i = 0; i < lengthX; i++) {
-    do {
-      x[i] = x[i + 1];
-      x[i + 1] = x[i];
-    } while (x[i] < x[i + 1]);
-  }
-
-  return x;
-};
+var arr = [23, 90, 109, 1, 12, 43, 87, 10];
+function bubbleS(a) {
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < a.length - 1; i++) {
+      if (a[i] > a[i + 1]) {
+        let temp = a[i];
+        a[i] = a[i + 1];
+        a[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+}
 bubbleS(arr);
+console.log(arr);
