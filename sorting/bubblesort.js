@@ -1,17 +1,19 @@
-var arr = [23, 90, 109, 1, 12, 43, 87, 10];
-function bubbleS(a) {
+function bubbleS(arr) {
   let swapped;
   do {
     swapped = false;
-    for (let i = 0; i < a.length - 1; i++) {
-      if (a[i] > a[i + 1]) {
-        let temp = a[i];
-        a[i] = a[i + 1];
-        a[i + 1] = temp;
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
         swapped = true;
       }
     }
   } while (swapped);
+  return arr;
 }
-bubbleS(arr);
-console.log(arr);
+
+module.exports = {
+  bubbleS
+};

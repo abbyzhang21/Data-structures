@@ -1,5 +1,3 @@
-var x = [5, 4, 6, 1, 12, 35];
-
 function sortA(arr) {
   var pivot = arr[0];
   var left = [];
@@ -17,4 +15,6 @@ function sortA(arr) {
   }
   return sortA(left).concat(pivot, sortA(right));
 }
-console.log(sortA(x));
+module.exports = {
+  sortA
+};

@@ -1,4 +1,4 @@
-var a = [33, 103, 3, 726, 200, 984, 198, 764, 9];
+// var a = [33, 103, 3, 726, 200, 984, 198, 764, 9];
 function mergeS(x) {
   if (x.length < 2) {
     return x;
@@ -26,4 +26,7 @@ function merge(left, right) {
   }
   return newX;
 }
-console.log(mergeS(a));
+// console.log(mergeS(a));
+module.exports = {
+  mergeS
+};
